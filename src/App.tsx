@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import "./App.css";
 import productsData from "./products.json";
 
-// Typdefinition för en produkt
 interface Product {
   id: number;
   name: string;
@@ -12,10 +11,9 @@ interface Product {
 }
 
 function App() {
-  const products: Product[] = productsData; // Typa JSON-data
+  const products: Product[] = productsData;
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null); // Typa vald produkt
 
-  // Visa detaljerad vy om en produkt är vald
   if (selectedProduct) {
     return (
       <div className="product-detail">
@@ -28,7 +26,6 @@ function App() {
     );
   }
 
-  // Visa produktlistan som standard
   return (
     <div className="product-list">
       <h1>Våra Lakritsprodukter</h1>

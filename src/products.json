@@ -19,5 +19,54 @@
     "price": 40,
     "image": "https://via.placeholder.com/150",
     "description": "Lakrits täckt med mörk choklad för en lyxig upplevelse."
+  },
+  {
+    "id": 4,
+    "name": "Lakritsremmar",
+    "price": 15,
+    "image": "https://via.placeholder.com/150",
+    "description": "Långa och sega remmar fyllda med lakritssmak."
+  },
+  {
+    "id": 5,
+    "name": "Lakritskola",
+    "price": 10,
+    "image": "https://via.placeholder.com/150",
+    "description": "Mjuka kolor med en hint av lakrits."
+  },
+  {
+    "id": 6,
+    "name": "Salmiakbollar",
+    "price": 30,
+    "image": "https://via.placeholder.com/150",
+    "description": "Hårda karameller med en intensiv salmiaksmak."
+  },
+  {
+    "id": 7,
+    "name": "Premium lakritspulver",
+    "price": 50,
+    "image": "https://via.placeholder.com/150",
+    "description": "Finmalet lakritspulver, perfekt för bakning och desserter."
+  },
+  {
+    "id": 8,
+    "name": "Lakritssalt",
+    "price": 35,
+    "image": "https://via.placeholder.com/150",
+    "description": "Havssalt med en touch av lakrits för matlagning."
+  },
+  {
+    "id": 9,
+    "name": "Mjölkchokladdoppad lakrits",
+    "price": 45,
+    "image": "https://via.placeholder.com/150",
+    "description": "Lakrits täckt med krämig mjölkchoklad."
+  },
+  {
+    "id": 10,
+    "name": "Rå lakritsrot",
+    "price": 15,
+    "image": "https://via.placeholder.com/150",
+    "description": "Naturlig lakritsrot, perfekt att tugga på."
   }
 ]
