@@ -1,35 +1,52 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React, { useState } from "react";
+import "./App.css";
+import productsData from "./products.json";
 
-function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+// Typdefinition för en produkt
+interface Product {
+  id: number;
+  name: string;
+  price: number;
+  image: string;
+  description: string;
 }
 
-export default App
+function App() {
+  const products: Product[] = productsData; // Typa JSON-data
+  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null); // Typa vald produkt
+
+  // Visa detaljerad vy om en produkt är vald
+  if (selectedProduct) {
+    return (
+      <div className="product-detail">
+        <h1>{selectedProduct.name}</h1>
+        <img src={selectedProduct.image} alt={selectedProduct.name} />
+        <p>{selectedProduct.description}</p>
+        <p>Pris: {selectedProduct.price} SEK</p>
+        <button onClick={() => setSelectedProduct(null)}>Tillbaka</button>
+      </div>
+    );
+  }
+
+  // Visa produktlistan som standard
+  return (
+    <div className="product-list">
+      <h1>Våra Lakritsprodukter</h1>
+      <div className="product-grid">
+        {products.map((product) => (
+          <div
+            key={product.id}
+            className="product-card"
+            onClick={() => setSelectedProduct(product)}
+          >
+            <img src={product.image} alt={product.name} />
+            <h2>{product.name}</h2>
+            <p>{product.price} SEK</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+export default App;

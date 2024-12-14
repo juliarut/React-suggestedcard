@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "name": "Saltlakrits",
+    "price": 25,
+    "image": "https://via.placeholder.com/150",
+    "description": "Klassisk saltlakrits med rik smak."
+  },
+  {
+    "id": 2,
+    "name": "Söt lakrits",
+    "price": 20,
+    "image": "https://via.placeholder.com/150",
+    "description": "Söt och mjuk lakrits som smälter i munnen."
+  },
+  {
+    "id": 3,
+    "name": "Chokladdoppad lakrits",
+    "price": 40,
+    "image": "https://via.placeholder.com/150",
+    "description": "Lakrits täckt med mörk choklad för en lyxig upplevelse."
+  }
+]
