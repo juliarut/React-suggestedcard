@@ -12,7 +12,7 @@ interface Product {
 
 function App() {
   const products: Product[] = productsData;
-  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null); // Typa vald produkt
+  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
 
   if (selectedProduct) {
     return (
