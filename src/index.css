@@ -2,8 +2,8 @@
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-  color: #ffffff; /* Vit text */
-  background-color: #000000; /* Svart bakgrund */
+  color: #ffffff;
+  background-color: #000000;
 }
 
 body {
@@ -11,8 +11,8 @@ body {
   padding: 0;
   min-width: 320px;
   min-height: 100vh;
-  background-color: #000000; /* Svart bakgrund */
-  color: #ffffff; /* Vit text */
+  background-color: #000000;
+  color: #ffffff;
 }
 
 h1,
@@ -27,11 +27,11 @@ h6 {
 
 a {
   font-weight: 500;
-  color: #ffffff; /* Vit text för länkar */
+  color: #ffffff;
   text-decoration: none;
 }
 a:hover {
-  color: #dddddd; /* Ljusare text vid hover */
+  color: #dddddd;
 }
 
 button {
@@ -41,15 +41,15 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a; /* Mörk bakgrund för knappar */
-  color: #ffffff; /* Vit text på knappar */
+  background-color: #1a1a1a;
+  color: #ffffff;
   cursor: pointer;
   transition: border-color 0.25s, background-color 0.25s;
 }
 button:hover {
-  background-color: #333333; /* Ljusare bakgrund vid hover */
+  background-color: #333333;
 }
 button:focus,
 button:focus-visible {
-  outline: 2px solid #ffffff; /* Vit kontur vid fokus */
+  outline: 2px solid #ffffff;
 }

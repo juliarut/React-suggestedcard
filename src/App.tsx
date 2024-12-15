@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./App.css";
 import productsData from "./products.json";
 import ProductCard from "./components/ProductCard";
+import Cart from "./components/Cart";
 
 interface Product {
   id: number;
@@ -13,6 +14,7 @@ interface Product {
 
 function App() {
   const products: Product[] = productsData;
+  const [view, setView] = useState<"products" | "cart">("products");
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
   const [cart, setCart] = useState<{ product: Product; quantity: number }[]>(
     []
@@ -62,9 +64,22 @@ function App() {
     );
   }
 
+  if (view === "cart") {
+    return (
+      <div className="cart-view">
+        <h1>Varukorg</h1>
+        <Cart items={cart} onRemove={removeFromCart} />
+        <button onClick={() => setView("products")}>
+          Tillbaka till produkter
+        </button>
+      </div>
+    );
+  }
+
   return (
     <div className="product-list">
       <h1>Våra Lakritsprodukter</h1>
+      <button onClick={() => setView("cart")}>Visa varukorg</button>
       <div className="product-grid">
         {products.map((product) => (
           <ProductCard
@@ -76,26 +91,6 @@ function App() {
             <p>{product.price} SEK</p>
           </ProductCard>
         ))}
-      </div>
-      <div className="cart">
-        <h2>Varukorg</h2>
-        {cart.length === 0 ? (
-          <p>Varukorgen är tom.</p>
-        ) : (
-          <ul>
-            {cart.map((item, index) => (
-              <li key={`${item.product.id}-${index}`}>
-                <span>
-                  {item.product.name} - {item.product.price} SEK (x
-                  {item.quantity})
-                </span>
-                <button onClick={() => removeFromCart(item.product.id)}>
-                  Ta bort
-                </button>
-              </li>
-            ))}
-          </ul>
-        )}
       </div>
     </div>
   );
